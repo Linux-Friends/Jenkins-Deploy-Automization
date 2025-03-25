@@ -2,12 +2,23 @@
 
 <br>
 
-## 📍 Contributors
+## 📍 Contents
+- [1️⃣ 프로젝트 개요](#1%EF%B8%8F⃣-프로젝트-개요)
+- [2️⃣ 프로젝트 목표]()
+- [3️⃣ 프로젝트 흐름](#3%EF%B8%8F⃣-프로젝트-흐름)
+- [4️⃣ 설계 과정](#4%EF%B8%8F⃣-설계-과정)
+- [5️⃣ 설계 고도화](#5%EF%B8%8F⃣-설계-고도화-jenkins-pipeline-기반-자동화)
+
+<br>
+
+## 👩‍💻 Contributors
 
 | <img src="https://github.com/DoomchitYJ.png" width="220" /> | <img src="https://github.com/imhaeunim.png" width="220" /> |
-| --- | --- |
+| :-: | :-: |
 | 박영진<br/>[@DoomchitYJ](https://github.com/DoomchitYJ) | 임하은<br/>[@imhaeunim](https://github.com/imhaeunim) |
 
+
+<br>
 <br>
 
 ## 1️⃣ 프로젝트 개요
@@ -17,8 +28,24 @@
 - `inotifywait` 기반 스크립트를 사용했으며, 이후 Jenkins Pipeline으로 고도화 아이디어 제시
 
 <br>
+<br>
 
-## 2️⃣ 프로젝트 흐름
+## 2️⃣ 프로젝트 목표
+
+✔ **지속적인 통합과 배포(CI/CD)에 대한 실전 감각을 기른다.** 
+
+✔ **Jenkins Pipeline을 활용한 자동화 스크립트 작성 능력을 강화한다.**
+
+✔ **Docker 환경에서의 애플리케이션 빌드 및 배포 구조를 숙지한다.**
+
+✔ **파일 변경 감지(`inotifywait`)를 활용한 자동 트리거링 기법을 실습한다.**
+
+✔ **`scp`, `ssh` 기반의 원격 서버 제어 및 배포 프로세스를 이해한다.**
+
+<br>
+<br>
+
+## 3️⃣ 프로젝트 흐름
 
 ### ▶ GitHub 커밋 시 Jenkins가 자동으로 jar 생성
 
@@ -35,8 +62,9 @@
 - `ssh`로 접속하여 기존 프로세스 종료 후 jar 앱 재실행 처리
 
 <br>
+<br>
 
-## 3️⃣ 설계 과정
+## 4️⃣ 설계 과정
 
 ### ✅ `Run Jenkins container (bind-mount)`
 
@@ -165,7 +193,7 @@ done
 
 <br>
 
-### ✅ 외부 PC ssh
+### ✅ 원격 서버로 배포
 
 ```bash
 #!/bin/bash
@@ -258,8 +286,9 @@ SSH 접속시, 비밀번호를 입력해주지 않아도 된다!
 >
 
 <br>
+<br>
 
-## 4️⃣ 설계 고도화: Jenkins Pipeline 기반 자동화
+## 5️⃣ 설계 고도화: Jenkins Pipeline 기반 자동화
 
 ### 💬 평가
 
